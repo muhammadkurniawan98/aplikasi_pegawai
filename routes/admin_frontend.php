@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/create/{id}', [PangkatController::class, 'sendSkUsulanKenaikanPangkat'])->name('admin.pangkat.create');
         Route::get('/{nip}/download/', [PangkatController::class, 'download'])->name('admin.pangkat.download');
         Route::post('/{id}/verifikasi', [PangkatController::class, 'sendSkUsulanKenaikanPangkat'])->name('admin.pangkat.verifikasi');
-        Route::post('/laporan-pangkat/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanPangkat'])->name('admin.pensiun.laporan.download');
+        Route::post('/laporan-pangkat/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanPangkat'])->name('admin.pangkat.laporan.download');
     });
 
     Route::group(['prefix' => 'usulan-pensiun'], function (){

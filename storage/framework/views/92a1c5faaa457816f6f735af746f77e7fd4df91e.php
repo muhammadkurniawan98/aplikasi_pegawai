@@ -88,7 +88,13 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN PANGKAT PEGAWAI</h6>
-                        <button type="submit" class="btn btn-primary">download</button>
+                        <form action="<?php echo e(route('admin.pangkat.laporan.download')); ?>" method="post">
+                            <?php echo csrf_field(); ?>
+                            <div class="form-group row">
+                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -104,7 +110,13 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
-                        <button type="submit" class="btn btn-primary">download</button>
+                        <form action="<?php echo e(route('admin.pensiun.laporan.download')); ?>" method="post">
+                            <?php echo csrf_field(); ?>
+                            <div class="form-group row">
+                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
