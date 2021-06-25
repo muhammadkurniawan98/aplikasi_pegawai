@@ -68,8 +68,10 @@
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN GAJI PEGAWAI</h6>
                         <form action="<?php echo e(route('admin.gaji.laporan.download')); ?>" method="post">
                             <?php echo csrf_field(); ?>
-                            <input type="text" class="form-control">
-                            <button type="submit" class="btn btn-primary">download</button>
+                            <div class="form-group row">
+                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
+                            </div>
                         </form>
                     </div>
                     <div class="card-body">
