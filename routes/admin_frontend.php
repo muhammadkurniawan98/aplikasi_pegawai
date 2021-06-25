@@ -19,7 +19,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/create/{id}', [GajiController::class, 'sendSkUsulanKenaikanGaji'])->name('admin.gaji.create');
         Route::get('/{nip}/download/', [GajiController::class, 'download'])->name('admin.gaji.download');
         Route::post('/{id}/verifikasi', [GajiController::class, 'sendSkUsulanKenaikanGaji'])->name('admin.gaji.verifikasi');
-        Route::get('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanGaji'])->name('admin.gaji.laporan.download');
+        Route::post('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanGaji'])->name('admin.gaji.laporan.download');
     });
 
     Route::group(['prefix' => 'usulan-kenaikan-pangkat'], function (){
@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/create/{id}', [PangkatController::class, 'sendSkUsulanKenaikanPangkat'])->name('admin.pangkat.create');
         Route::get('/{nip}/download/', [PangkatController::class, 'download'])->name('admin.pangkat.download');
         Route::post('/{id}/verifikasi', [PangkatController::class, 'sendSkUsulanKenaikanPangkat'])->name('admin.pangkat.verifikasi');
-        Route::get('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanPangkat'])->name('admin.pensiun.laporan.download');
+        Route::post('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanKenaikanPangkat'])->name('admin.pensiun.laporan.download');
     });
 
     Route::group(['prefix' => 'usulan-pensiun'], function (){
@@ -37,6 +37,6 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/create/{id}', [PensiunController::class, 'sendSkUsulanPensiun'])->name('admin.pensiun.create');
         Route::get('/{nip}/download/', [PensiunController::class, 'download'])->name('admin.pensiun.download');
         Route::post('/{id}/verifikasi', [PensiunController::class, 'sendSkUsulanPensiun'])->name('admin.pensiun.verifikasi');
-        Route::get('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanPensiun'])->name('admin.pensiun.laporan.download');
+        Route::post('/{tahun}/download', [LaporanController::class, 'downloadLaporanUsulanPensiun'])->name('admin.pensiun.laporan.download');
     });
 });
