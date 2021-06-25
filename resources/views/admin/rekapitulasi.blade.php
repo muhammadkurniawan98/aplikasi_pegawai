@@ -67,7 +67,11 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN GAJI PEGAWAI</h6>
-                        <button type="submit" class="btn btn-primary">download</button>
+                        <form action="{{ route('admin.gaji.laporan.download') }}" method="post">
+                            @csrf
+                            <input type="text" class="form-control">
+                            <button type="submit" class="btn btn-primary">download</button>
+                        </form>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Barryvdh\DomPDF\PDF;
+use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
@@ -12,17 +13,17 @@ class LaporanController extends Controller
         $this->middleware('auth:admin');
     }
 
-    public function downloadLaporanUsulanKenaikanGaji($tahun)
+    public function downloadLaporanUsulanKenaikanGaji(Request $request)
     {
 
     }
 
-    public function downloadLaporanUsulanKenaikanPangkat($tahun)
+    public function downloadLaporanUsulanKenaikanPangkat(Request $request)
     {
 
     }
 
-    public function downloadLaporanUsulanPensiun($tahun)
+    public function downloadLaporanUsulanPensiun(Request $request)
     {
 
     }

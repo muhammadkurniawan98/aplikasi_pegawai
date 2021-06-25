@@ -66,7 +66,11 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN GAJI PEGAWAI</h6>
-                        <button type="submit" class="btn btn-primary">download</button>
+                        <form action="<?php echo e(route('admin.gaji.laporan.download')); ?>" method="post">
+                            <?php echo csrf_field(); ?>
+                            <input type="text" class="form-control">
+                            <button type="submit" class="btn btn-primary">download</button>
+                        </form>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -96,7 +100,7 @@
 
                 <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3 justify-content-between">
+                    <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
                         <button type="submit" class="btn btn-primary">download</button>
                     </div>
