@@ -80,8 +80,9 @@
 
                 <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
+                    <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN PANGKAT PEGAWAI</h6>
+                        <button type="submit" class="btn btn-primary">download</button>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -95,8 +96,9 @@
 
                 <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
+                    <div class="card-header py-3 justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
+                        <button type="submit" class="btn btn-primary">download</button>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -114,7 +116,6 @@
 
     </div>
     <!-- /.container-fluid -->
-
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('admin.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\project_website\github\clone\aplikasi_pegawai\resources\views/admin/rekapitulasi.blade.php ENDPATH**/ ?>

@@ -97,7 +97,7 @@
 
                 <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3 justify-content-between">
+                    <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
                         <button type="submit" class="btn btn-primary">download</button>
                     </div>
@@ -117,5 +117,4 @@
 
     </div>
     <!-- /.container-fluid -->
-
 @endsection
