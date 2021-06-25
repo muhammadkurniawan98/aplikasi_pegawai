@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/8pUj0Mw7K7QwcAuTL9Ws1izdzknhLWGhXBCZy3la" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/rekapitulasi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/rekapitulasi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin_frontend.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin_frontend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/9qgurJbMEV4XXLxl9LIwhu4kJpmSBGcP4SlY5tUl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/yN9sLbhWTXrBpQ6OYDWa48zbAFulAq9QHj98x2Zo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/92a1c5faaa457816f6f735af746f77e7fd4df91e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/92a1c5faaa457816f6f735af746f77e7fd4df91e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +160,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -188,7 +180,7 @@
       <updated>1624514832009</updated>
       <workItem from="1624514854588" duration="2046000" />
       <workItem from="1624531778820" duration="579000" />
-      <workItem from="1624592752820" duration="11562000" />
+      <workItem from="1624592752820" duration="12252000" />
     </task>
     <servers />
   </component>
