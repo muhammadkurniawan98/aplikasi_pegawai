@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/rekapitulasi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/rekapitulasi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/92a1c5faaa457816f6f735af746f77e7fd4df91e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/92a1c5faaa457816f6f735af746f77e7fd4df91e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/977836a473614b14159fe4f605928f8f30190a57.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/977836a473614b14159fe4f605928f8f30190a57.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,9 +164,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js/locales" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\js\locales" />
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\js" />
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -180,7 +191,7 @@
       <updated>1624514832009</updated>
       <workItem from="1624514854588" duration="2046000" />
       <workItem from="1624531778820" duration="579000" />
-      <workItem from="1624592752820" duration="12252000" />
+      <workItem from="1624592752820" duration="13020000" />
     </task>
     <servers />
   </component>

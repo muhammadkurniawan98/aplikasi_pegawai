@@ -28,6 +28,7 @@
     <link href="<?php echo e(asset('/css/fileinput.min.css')); ?>" media="all" rel="stylesheet" type="text/css" />
     <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
     <link href="<?php echo e(asset('/css/fileinput-rtl.min.css')); ?>" media="all" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('/css/bootstrap-datepicker.min.css')); ?>" rel="stylesheet" type="text/css">
     <script src="<?php echo e(asset('/js/jquery-3.3.1.min.js')); ?>"></script>
     <!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you
         wish to resize images before upload. This must be loaded before fileinput.min.js -->
@@ -46,6 +47,8 @@
     <!-- optionally if you need a theme like font awesome theme you can include it as mentioned below -->
     <script src="<?php echo e(asset('/js/theme.js')); ?>"></script>
     <script src="<?php echo e(asset('/js/locales/id.js')); ?>"></script>
+    <script src="<?php echo e(asset('/js/bootstrap-datepicker.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('/js/locales/bootstrap-datepicker.id.min.js')); ?>"></script>
 
 </head>
 
