@@ -70,7 +70,7 @@
                         <form action="{{ route('admin.gaji.laporan.download') }}" method="post">
                             @csrf
                             <div class="form-group row">
-                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <input type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun">
                                 <button type="submit" class="col-xl-4 btn btn-primary">download</button>
                             </div>
                         </form>
@@ -92,7 +92,7 @@
                         <form action="{{ route('admin.pangkat.laporan.download') }}" method="post">
                             @csrf
                             <div class="form-group row">
-                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <input type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun">
                                 <button type="submit" class="col-xl-4 btn btn-primary">download</button>
                             </div>
                         </form>
@@ -114,7 +114,7 @@
                         <form action="{{ route('admin.pensiun.laporan.download') }}" method="post">
                             @csrf
                             <div class="form-group row">
-                                <input type="text" class="col-xl-8 form-control" name="tahun">
+                                <input type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun">
                                 <button type="submit" class="col-xl-4 btn btn-primary">download</button>
                             </div>
                         </form>
