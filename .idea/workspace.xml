@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_dokumen_simpedu_199807072007451206_2021_06_23_01_08_10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_gaji_berkala_199807072007451206_2021_06_23_01_08_10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_pangkat_terakhir_199807072007451206_2021_06_23_01_08_10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/04/08/0408b827b5d0ab03ed0d2d5d3aa9ea6910e3209e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/5c/78/5c785c036466adea360111aa28563bfd556b5fba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8pUj0Mw7K7QwcAuTL9Ws1izdzknhLWGhXBCZy3la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-    </list>
+    <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +185,7 @@
       <updated>1624514832009</updated>
       <workItem from="1624514854588" duration="2046000" />
       <workItem from="1624531778820" duration="579000" />
-      <workItem from="1624592752820" duration="17929000" />
+      <workItem from="1624592752820" duration="18323000" />
     </task>
     <servers />
   </component>
