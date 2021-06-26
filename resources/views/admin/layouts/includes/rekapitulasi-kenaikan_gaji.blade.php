@@ -33,13 +33,13 @@
     var rekapitulasiKenaikanGaji = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: resolveYear(),
+            labels: dataTahun(),
             datasets: [{
                 label: "Data",
                 backgroundColor: "#4e73df",
                 hoverBackgroundColor: "#2e59d9",
                 borderColor: "#4e73df",
-                data: resolveData(),
+                data: dataUsulan(),
             }],
         },
         options: {
@@ -69,7 +69,7 @@
                 yAxes: [{
                     ticks: {
                         min: 0,
-                        max: resolveUser(),
+                        max: jumlahMaxYAxis(),
                         maxTicksLimit: 5,
                         padding: 10,
                         // Include a dollar sign in the ticks
@@ -110,7 +110,7 @@
             },
         }
     });
-    function resolveData(){
+    function dataUsulan(){
         var data = [];
 
         @foreach(rekapitulasiKenaikanGaji() as $r)
@@ -120,15 +120,21 @@
         return data.reverse();
     }
 
-    function resolveYear(){
+    function dataTahun(){
         var data = ["{{ date('Y') }}", "{{ date('Y')-1 }}", "{{ date('Y')-2 }}", "{{ date('Y')-3 }}", "{{ date('Y')-4 }}", "{{ date('Y')-5 }}"];
 
         return data.reverse();
     }
 
-    function resolveUser()
+    function jumlahMaxYAxis()
     {
-        var data = {{ count(\App\Models\UsulanKenaikanGaji::all()) }}
-        return data;
+        var data = dataUsulan();
+        var max = 0;
+        for (let i = 0; i < data.length; i++) {
+            if (data[i] > max){
+                max = data[i];
+            }
+        }
+        return max + 9;
     }
 </script>

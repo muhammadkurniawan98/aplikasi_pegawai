@@ -33,13 +33,13 @@
     var rekapitulasiKenaikanPangkat = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: resolveYear(),
+            labels: dataTahun(),
             datasets: [{
                 label: "Data",
                 backgroundColor: "#5ddf4e",
                 hoverBackgroundColor: "#52f50c",
                 borderColor: "#4e73df",
-                data: resolveData(),
+                data: dataUsulan(),
             }],
         },
         options: {
@@ -69,7 +69,7 @@
                 yAxes: [{
                     ticks: {
                         min: 0,
-                        max: resolveUser(),
+                        max: jumlahMaxYAxis(),
                         maxTicksLimit: 5,
                         padding: 10,
                         // Include a dollar sign in the ticks
@@ -110,7 +110,7 @@
             },
         }
     });
-    function resolveData(){
+    function dataUsulan(){
         var data = [];
 
         <?php $__currentLoopData = rekapitulasiKenaikanPangkat(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -120,17 +120,22 @@
             return data.reverse();
     }
 
-    function resolveYear(){
+    function dataTahun(){
         var data = ["<?php echo e(date('Y')); ?>", "<?php echo e(date('Y')-1); ?>", "<?php echo e(date('Y')-2); ?>", "<?php echo e(date('Y')-3); ?>", "<?php echo e(date('Y')-4); ?>", "<?php echo e(date('Y')-5); ?>"];
 
         return data.reverse();
     }
 
-    function resolveUser()
+    function jumlahMaxYAxis()
     {
-        var data = <?php echo e(count(\App\Models\UsulanKenaikanPangkat::all())); ?>
-
-        return data;
+        var data = dataUsulan();
+        var max = 0;
+        for (let i = 0; i < data.length; i++) {
+            if (data[i] > max){
+                max = data[i];
+            }
+        }
+        return max + 9;
     }
 </script>
 <?php /**PATH D:\project_website\github\clone\aplikasi_pegawai\resources\views/admin/layouts/includes/rekapitulasi-kenaikan_pangkat.blade.php ENDPATH**/ ?>
