@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\UsulanKenaikanGaji;
 use App\Models\UsulanKenaikanPangkat;
 use App\Models\UsulanPensiun;
-use Barryvdh\DomPDF\PDF;
-use Illuminate\Http\Request;
+use PDF;
+
 
 class LaporanController extends Controller
 {
@@ -16,9 +16,10 @@ class LaporanController extends Controller
         $this->middleware('auth:admin');
     }
 
-    public function downloadLaporanUsulanKenaikanGaji(Request $request)
+    public function downloadLaporanUsulanKenaikanGaji($tahun)
     {
-        $tahun = empty(trim($request->tahun))? date('Y'):$request->tahun;
+        $tahun = empty(trim($tahun))? date('Y'):$tahun;
+
         $laporanUsulanKenaikanGaji = UsulanKenaikanGaji::where('usulan_kenaikan_gaji.created_at', 'like', '%'.$tahun.'%')
                                     ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_gaji.user_id')
                                     ->select(
@@ -28,12 +29,22 @@ class LaporanController extends Controller
                                         'usulan_kenaikan_gaji.created_at',
                                     )
                                     ->get();
-        dd($laporanUsulanKenaikanGaji);
+
+        $data = [
+            'laporanUsulanKenaikanGaji' => $laporanUsulanKenaikanGaji,
+            'tahun' => $tahun
+        ];
+
+        $pdf = PDF::loadView('admin.laporan-pdf', $data);
+
+        set_time_limit(300);
+
+        return $pdf->download('document.pdf');
     }
 
-    public function downloadLaporanUsulanKenaikanPangkat(Request $request)
+    public function downloadLaporanUsulanKenaikanPangkat($tahun)
     {
-        $tahun = empty(trim($request->tahun))? date('Y'):$request->tahun;
+        $tahun = empty(trim($tahun))? date('Y'):$tahun;
         $laporanUsulanKenaikanPangkat = UsulanKenaikanPangkat::where('usulan_kenaikan_pangkat.created_at', 'like', '%'.$tahun.'%')
                                         ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_pangkat.user_id')
                                         ->select(
@@ -45,9 +56,9 @@ class LaporanController extends Controller
                                         ->get();
     }
 
-    public function downloadLaporanUsulanPensiun(Request $request)
+    public function downloadLaporanUsulanPensiun($tahun)
     {
-        $tahun = empty(trim($request->tahun))? date('Y'):$request->tahun;
+        $tahun = empty(trim($tahun))? date('Y'):$tahun;
         $laporanUsulanPensiun = UsulanPensiun::where('usulan_pensiun.created_at', 'like', '%'.$tahun.'%')
             ->leftJoin('users', 'users.id', '=', 'usulan_pensiun.user_id')
             ->select(

@@ -67,21 +67,11 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN GAJI PEGAWAI</h6>
-                        <form action="{{ route('admin.gaji.laporan.download') }}" method="post">
-                            @csrf
-                            <div class="form-group row">
-                                <input id="tahun_gaji" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" readonly>
-                                <script>
-                                    $('#tahun_gaji').datepicker({
-                                        format: 'yyyy',
-                                        language: 'id',
-                                        viewMode: 'years',
-                                        minViewMode: 'years'
-                                    });
-                                </script>
-                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
-                            </div>
-                        </form>
+
+                        <div class="form-group row">
+                            <input id="tahun_gaji" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporangaji()" readonly>
+                            <a id="link_laporan_gaji" href="#" class="col-xl-4 btn btn-primary">download</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -97,21 +87,8 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN PANGKAT PEGAWAI</h6>
-                        <form action="{{ route('admin.pangkat.laporan.download') }}" method="post">
-                            @csrf
-                            <div class="form-group row">
-                                <input id="tahun_pangkat" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" readonly>
-                                <script>
-                                    $('#tahun_pangkat').datepicker({
-                                        format: 'yyyy',
-                                        language: 'id',
-                                        viewMode: 'years',
-                                        minViewMode: 'years'
-                                    });
-                                </script>
-                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
-                            </div>
-                        </form>
+                        <input id="tahun_pangkat" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpangkat()" readonly>
+                        <a id="link_laporan_pangkat" href="#" class="col-xl-4 btn btn-primary">download</a>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -127,21 +104,8 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
-                        <form action="{{ route('admin.pensiun.laporan.download') }}" method="post">
-                            @csrf
-                            <div class="form-group row">
-                                <input id="tahun_pensiun" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" readonly>
-                                <script>
-                                    $('#tahun_pensiun').datepicker({
-                                        format: 'yyyy',
-                                        language: 'id',
-                                        viewMode: 'years',
-                                        minViewMode: 'years'
-                                    });
-                                </script>
-                                <button type="submit" class="col-xl-4 btn btn-primary">download</button>
-                            </div>
-                        </form>
+                        <input id="tahun_pensiun" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpensiun()" readonly>
+                        <a id="link_laporan_pensiun" href="#" class="col-xl-4 btn btn-primary">download</a>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -159,4 +123,39 @@
 
     </div>
     <!-- /.container-fluid -->
+    <script>
+        $('#tahun_gaji').datepicker({
+            format: 'yyyy',
+            language: 'id',
+            viewMode: 'years',
+            minViewMode: 'years'
+        });
+        $('#tahun_pangkat').datepicker({
+            format: 'yyyy',
+            language: 'id',
+            viewMode: 'years',
+            minViewMode: 'years'
+        });
+        $('#tahun_pensiun').datepicker({
+            format: 'yyyy',
+            language: 'id',
+            viewMode: 'years',
+            minViewMode: 'years'
+        });
+        function sethreflaporangaji(){
+            var a = document.getElementById('link_laporan_gaji');
+            var input = document.getElementById('tahun_gaji');
+            a.setAttribute('href', '/admin/laporan-gaji/'+input.value+'/download');
+        }
+        function sethreflaporanpangkat(){
+            var a = document.getElementById('link_laporan_pangkat');
+            var input = document.getElementById('tahun_pangkat');
+            a.setAttribute('href', '/admin/laporan-pangkat/'+input.value+'/download');
+        }
+        function sethreflaporanpensiun(){
+            var a = document.getElementById('link_laporan_pensiun');
+            var input = document.getElementById('tahun_pensiun');
+            a.setAttribute('href', '/admin/laporan-pensiun/'+input.value+'/download');
+        }
+    </script>
 @endsection
