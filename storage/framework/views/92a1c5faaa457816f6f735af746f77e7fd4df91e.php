@@ -86,8 +86,10 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI KENAIKAN PANGKAT PEGAWAI</h6>
-                        <input id="tahun_pangkat" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpangkat()" readonly>
-                        <a id="link_laporan_pangkat" href="#" class="col-xl-4 btn btn-primary">download</a>
+                        <div class="form-group row">
+                            <input id="tahun_pangkat" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpangkat()" readonly>
+                            <a id="link_laporan_pangkat" href="#" class="col-xl-4 btn btn-primary">download</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
@@ -103,8 +105,10 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between">
                         <h6 class="m-0 text-primary font-weight-normal">REKAPITULASI PENSIUN PEGAWAI</h6>
-                        <input id="tahun_pensiun" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpensiun()" readonly>
-                        <a id="link_laporan_pensiun" href="#" class="col-xl-4 btn btn-primary">download</a>
+                        <div class="form-group row">
+                            <input id="tahun_pensiun" type="text" class="col-xl-8 form-control" name="tahun" placeholder="Tahun" onchange="sethreflaporanpensiun()" readonly>
+                            <a id="link_laporan_pensiun" href="#" class="col-xl-4 btn btn-primary">download</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="chart-bar">
