@@ -31,15 +31,14 @@ class LaporanController extends Controller
                                     ->get();
 
         $data = [
+            'judul' => 'DATA USULAN KENAIKAN GAJI PEGAWAI SMA NEGERI 1 SEPUTIH BANYAK TAHUN '.$tahun,
             'laporan' => $laporan,
             'tahun' => $tahun
         ];
 
-        //$pdf = PDF::loadView('admin.laporan-pdf', $data);
+        $pdf = PDF::loadView('admin.laporan-pdf', $data);
 
-        //return $pdf->download('laporan_usulan_kenaikan_gaji_pegawai_tahun_'.$tahun.'_.pdf');
-
-        return view('admin.laporan-pdf', $data);
+        return $pdf->download('laporan_usulan_kenaikan_gaji_pegawai_tahun_'.$tahun.'_.pdf');
     }
 
     public function downloadLaporanUsulanKenaikanPangkat($tahun)
@@ -56,6 +55,7 @@ class LaporanController extends Controller
                                         ->get();
 
         $data = [
+            'judul' => 'DATA USULAN KENAIKAN PANGKAT PEGAWAI SMA NEGERI 1 SEPUTIH BANYAK TAHUN '.$tahun,
             'laporan' => $laporan,
             'tahun' => $tahun
         ];
@@ -79,6 +79,7 @@ class LaporanController extends Controller
             ->get();
 
         $data = [
+            'judul' => 'DATA USULAN PENSIUN PEGAWAI SMA NEGERI 1 SEPUTIH BANYAK TAHUN '.$tahun,
             'laporan' => $laporan,
             'tahun' => $tahun
         ];
