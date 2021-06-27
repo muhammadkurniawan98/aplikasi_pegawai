@@ -15,6 +15,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th class="text-center font-weight-normal">NO</th>
                                 <th class="text-center font-weight-normal">NAMA</th>
                                 <th class="text-center font-weight-normal">NIP</th>
                                 <th class="text-center font-weight-normal">VERIFIKASI</th>
@@ -25,6 +26,7 @@
                             <?php if( $i = 1 + (($usulanKenaikanPangkat->currentPage()>=1?$usulanKenaikanPangkat->currentPage():1) - 1) * $usulanKenaikanPangkat->perPage()): ?>
                                 <?php $__currentLoopData = $usulanKenaikanPangkat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
+                                        <td class="text-center font-weight-light"><?php echo e($i++); ?></td>
                                         <td class="text-center font-weight-light"><?php echo e($u->nama); ?></td>
                                         <td class="text-center font-weight-light"><?php echo e($u->nip); ?></td>
                                         <td class="text-center font-weight-light <?php if($u->status_verifikasi == 0): ?> <?php echo e('alert-danger'); ?> <?php endif; ?>"><?php echo e($u->status_verifikasi == 0? 'Belum diverifikasi':''); ?></td>
