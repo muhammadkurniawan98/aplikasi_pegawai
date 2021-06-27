@@ -20,7 +20,7 @@ class LaporanController extends Controller
     {
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
 
-        $laporanUsulanKenaikanGaji = UsulanKenaikanGaji::where('usulan_kenaikan_gaji.created_at', 'like', '%'.$tahun.'%')
+        $laporan = UsulanKenaikanGaji::where('usulan_kenaikan_gaji.created_at', 'like', '%'.$tahun.'%')
                                     ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_gaji.user_id')
                                     ->select(
                                         'users.nama',
@@ -31,21 +31,19 @@ class LaporanController extends Controller
                                     ->get();
 
         $data = [
-            'laporanUsulanKenaikanGaji' => $laporanUsulanKenaikanGaji,
+            'laporan' => $laporan,
             'tahun' => $tahun
         ];
 
         $pdf = PDF::loadView('admin.laporan-pdf', $data);
 
-        set_time_limit(300);
-
-        return $pdf->download('document.pdf');
+        return $pdf->download('laporan_usulan_kenaikan_gaji_pegawai_tahun_'.$tahun.'_.pdf');
     }
 
     public function downloadLaporanUsulanKenaikanPangkat($tahun)
     {
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
-        $laporanUsulanKenaikanPangkat = UsulanKenaikanPangkat::where('usulan_kenaikan_pangkat.created_at', 'like', '%'.$tahun.'%')
+        $laporan = UsulanKenaikanPangkat::where('usulan_kenaikan_pangkat.created_at', 'like', '%'.$tahun.'%')
                                         ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_pangkat.user_id')
                                         ->select(
                                             'users.nama',
@@ -54,12 +52,21 @@ class LaporanController extends Controller
                                             'usulan_kenaikan_pangkat.created_at',
                                         )
                                         ->get();
+
+        $data = [
+            'laporan' => $laporan,
+            'tahun' => $tahun
+        ];
+
+        $pdf = PDF::loadView('admin.laporan-pdf', $data);
+
+        return $pdf->download('laporan_usulan_kenaikan_pangkat_pegawai_tahun_'.$tahun.'_.pdf');
     }
 
     public function downloadLaporanUsulanPensiun($tahun)
     {
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
-        $laporanUsulanPensiun = UsulanPensiun::where('usulan_pensiun.created_at', 'like', '%'.$tahun.'%')
+        $laporan = UsulanPensiun::where('usulan_pensiun.created_at', 'like', '%'.$tahun.'%')
             ->leftJoin('users', 'users.id', '=', 'usulan_pensiun.user_id')
             ->select(
                 'users.nama',
@@ -68,5 +75,14 @@ class LaporanController extends Controller
                 'usulan_pensiun.created_at',
             )
             ->get();
+
+        $data = [
+            'laporan' => $laporan,
+            'tahun' => $tahun
+        ];
+
+        $pdf = PDF::loadView('admin.laporan-pdf', $data);
+
+        return $pdf->download('laporan_usulan_pensiun_pegawai_tahun_'.$tahun.'_.pdf');
     }
 }

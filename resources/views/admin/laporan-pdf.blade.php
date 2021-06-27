@@ -1,29 +1,29 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <style>
-        body{
-
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
 <body>
 <table>
     <thead>
-        <tr>
-            <th>NAMA</th>
-            <th>NIP</th>
-            <th>STATUS PENGAJUAN</th>
-            <th>TANGGAL PENGAJUAN</th>
-        </tr>
+    <tr>
+        <th>NAMA</th>
+        <th>NIP</th>
+        <th>STATUS PENGAJUAN</th>
+        <th>TANGGAL PENGAJUAN</th>
+    </tr>
     </thead>
     <tbody>
-    @foreach($laporanUsulanKenaikanGaji as $laporan)
+    @foreach($laporan as $l)
         <tr>
-            <td>{{ $laporan->nama }}</td>
-            <td>{{ $laporan->nip }}</td>
-            <td>{{ $laporan->status_verifikasi }}</td>
-            <td>{{ $laporan->created_at }}</td>
+            <td>{{ $l->nama }}</td>
+            <td>{{ $l->nip }}</td>
+            <td>{{ $l->status_verifikasi }}</td>
+            <td>{{ $l->created_at }}</td>
         </tr>
     @endforeach
     </tbody>
