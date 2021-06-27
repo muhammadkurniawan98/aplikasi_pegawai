@@ -1,6 +1,5 @@
-@extends('admin.layouts.app')
-@section('admin-pangkat', 'active')
-@section('content')
+<?php $__env->startSection('admin-pangkat', 'active'); ?>
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -16,7 +15,6 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th class="text-center font-weight-normal">NO</th>
                                 <th class="text-center font-weight-normal">NAMA</th>
                                 <th class="text-center font-weight-normal">NIP</th>
                                 <th class="text-center font-weight-normal">VERIFIKASI</th>
@@ -24,15 +22,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @if( $i = 1 + (($usulanKenaikanPangkat->currentPage()>=1?$usulanKenaikanPangkat->currentPage():1) - 1) * $usulanKenaikanPangkat->perPage())
-                                @foreach($usulanKenaikanPangkat as $u)
+                            <?php if( $i = 1 + (($usulanKenaikanPangkat->currentPage()>=1?$usulanKenaikanPangkat->currentPage():1) - 1) * $usulanKenaikanPangkat->perPage()): ?>
+                                <?php $__currentLoopData = $usulanKenaikanPangkat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td class="text-center font-weight-light">{{ $i++ }}</td>
-                                        <td class="text-center font-weight-light">{{ $u->nama }}</td>
-                                        <td class="text-center font-weight-light">{{ $u->nip }}</td>
-                                        <td class="text-center font-weight-light @if($u->status_verifikasi == 0) {{'alert-danger'}} @endif">{{ $u->status_verifikasi == 0? 'Belum diverifikasi':'' }}</td>
+                                        <td class="text-center font-weight-light"><?php echo e($u->nama); ?></td>
+                                        <td class="text-center font-weight-light"><?php echo e($u->nip); ?></td>
+                                        <td class="text-center font-weight-light <?php if($u->status_verifikasi == 0): ?> <?php echo e('alert-danger'); ?> <?php endif; ?>"><?php echo e($u->status_verifikasi == 0? 'Belum diverifikasi':''); ?></td>
                                         <td class="text-center font-weight-light">
-                                            <a class="btn btn-danger btn-icon-split btn-sm" href="{{ route('admin.pangkat.show', $u->id) }}">
+                                            <a class="btn btn-danger btn-icon-split btn-sm" href="<?php echo e(route('admin.pangkat.show', $u->id)); ?>">
                                                 <span class="icon text-white-12">
                                                     <i class="fas fa-info"></i>
                                                 </span>
@@ -40,14 +37,17 @@
                                             </a>
                                         </td>
                                     </tr>
-                                @endforeach
-                            @endif
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php endif; ?>
                             </tbody>
                         </table>
-                        {{ $usulanKenaikanPangkat->links('pagination::bootstrap-4') }}
+                        <?php echo e($usulanKenaikanPangkat->links('pagination::bootstrap-4')); ?>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\project_website\github\clone\aplikasi_pegawai\resources\views/admin/verifikasi-usulan/index/kenaikan-pangkat.blade.php ENDPATH**/ ?>

@@ -16,6 +16,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th class="text-center font-weight-normal">NO</th>
                                 <th class="text-center font-weight-normal">NAMA</th>
                                 <th class="text-center font-weight-normal">NIP</th>
                                 <th class="text-center font-weight-normal">VERIFIKASI</th>
@@ -23,25 +24,27 @@
                             </tr>
                             </thead>
                             <tbody>
-
-                            @foreach($usulanPensiun as $u)
-                                <tr>
-                                    <td class="text-center font-weight-light">{{ $u->nama }}</td>
-                                    <td class="text-center font-weight-light">{{ $u->nip }}</td>
-                                    <td class="text-center font-weight-light @if($u->status_verifikasi == 0) {{'alert-danger'}} @endif">{{ $u->status_verifikasi == 0? 'Belum diverifikasi':'' }}</td>
-                                    <td class="text-center font-weight-light">
-                                        <a class="btn btn-danger btn-icon-split btn-sm" href="{{ route('admin.pensiun.show', $u->id) }}">
-                                            <span class="icon text-white-12">
-                                                <i class="fas fa-info"></i>
-                                            </span>
-                                            <span class="text font-weight-light">Lihat Detail</span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endforeach
-
+                            @if( $i = 1 + (($usulanPensiun->currentPage()>=1?$usulanPensiun->currentPage():1) - 1) * $usulanPensiun->perPage())
+                                @foreach($usulanPensiun as $u)
+                                    <tr>
+                                        <td class="text-center font-weight-light">{{ $i++ }}</td>
+                                        <td class="text-center font-weight-light">{{ $u->nama }}</td>
+                                        <td class="text-center font-weight-light">{{ $u->nip }}</td>
+                                        <td class="text-center font-weight-light @if($u->status_verifikasi == 0) {{'alert-danger'}} @endif">{{ $u->status_verifikasi == 0? 'Belum diverifikasi':'' }}</td>
+                                        <td class="text-center font-weight-light">
+                                            <a class="btn btn-danger btn-icon-split btn-sm" href="{{ route('admin.pensiun.show', $u->id) }}">
+                                                <span class="icon text-white-12">
+                                                    <i class="fas fa-info"></i>
+                                                </span>
+                                                <span class="text font-weight-light">Lihat Detail</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
                             </tbody>
                         </table>
+                        {{ $usulanPensiun->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

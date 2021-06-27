@@ -15,6 +15,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th class="text-center font-weight-normal">NO</th>
                                 <th class="text-center font-weight-normal">NAMA</th>
                                 <th class="text-center font-weight-normal">NIP</th>
                                 <th class="text-center font-weight-normal">VERIFIKASI</th>
@@ -22,25 +23,28 @@
                             </tr>
                             </thead>
                             <tbody>
-
-                            <?php $__currentLoopData = $usulanPensiun; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
-                                    <td class="text-center font-weight-light"><?php echo e($u->nama); ?></td>
-                                    <td class="text-center font-weight-light"><?php echo e($u->nip); ?></td>
-                                    <td class="text-center font-weight-light <?php if($u->status_verifikasi == 0): ?> <?php echo e('alert-danger'); ?> <?php endif; ?>"><?php echo e($u->status_verifikasi == 0? 'Belum diverifikasi':''); ?></td>
-                                    <td class="text-center font-weight-light">
-                                        <a class="btn btn-danger btn-icon-split btn-sm" href="<?php echo e(route('admin.pensiun.show', $u->id)); ?>">
-                                            <span class="icon text-white-12">
-                                                <i class="fas fa-info"></i>
-                                            </span>
-                                            <span class="text font-weight-light">Lihat Detail</span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
+                            <?php if( $i = 1 + (($usulanPensiun->currentPage()>=1?$usulanPensiun->currentPage():1) - 1) * $usulanPensiun->perPage()): ?>
+                                <?php $__currentLoopData = $usulanPensiun; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr>
+                                        <td class="text-center font-weight-light"><?php echo e($i++); ?></td>
+                                        <td class="text-center font-weight-light"><?php echo e($u->nama); ?></td>
+                                        <td class="text-center font-weight-light"><?php echo e($u->nip); ?></td>
+                                        <td class="text-center font-weight-light <?php if($u->status_verifikasi == 0): ?> <?php echo e('alert-danger'); ?> <?php endif; ?>"><?php echo e($u->status_verifikasi == 0? 'Belum diverifikasi':''); ?></td>
+                                        <td class="text-center font-weight-light">
+                                            <a class="btn btn-danger btn-icon-split btn-sm" href="<?php echo e(route('admin.pensiun.show', $u->id)); ?>">
+                                                <span class="icon text-white-12">
+                                                    <i class="fas fa-info"></i>
+                                                </span>
+                                                <span class="text font-weight-light">Lihat Detail</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php endif; ?>
                             </tbody>
                         </table>
+                        <?php echo e($usulanPensiun->links('pagination::bootstrap-4')); ?>
+
                     </div>
                 </div>
             </div>

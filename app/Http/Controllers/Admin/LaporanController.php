@@ -35,9 +35,11 @@ class LaporanController extends Controller
             'tahun' => $tahun
         ];
 
-        $pdf = PDF::loadView('admin.laporan-pdf', $data);
+        //$pdf = PDF::loadView('admin.laporan-pdf', $data);
 
-        return $pdf->download('laporan_usulan_kenaikan_gaji_pegawai_tahun_'.$tahun.'_.pdf');
+        //return $pdf->download('laporan_usulan_kenaikan_gaji_pegawai_tahun_'.$tahun.'_.pdf');
+
+        return view('admin.laporan-pdf', $data);
     }
 
     public function downloadLaporanUsulanKenaikanPangkat($tahun)
