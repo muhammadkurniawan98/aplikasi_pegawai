@@ -13,23 +13,50 @@
             width: 100%;
             font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             align-items: center;
-            margin: 25px;
+            margin: 30px;
         }
         .header .label-school{
             font-weight: bold;
             text-align: center;
+            font-size: 20px;
         }
         .header .label-address{
             font-weight: lighter;
             text-align: center;
+            font-size: 12px;
         }
         .header h3{
             text-align: center;
+            font-size: 16px;
+        }
+        .header .img-logo{
+            align-items: start;
+            position: absolute;
+            width: 50px;
+            height: auto;
+        }
+        .footer{
+            background: #ffffff;
+            color: #000000;
+            width: 100%;
+            font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 11px;
+            align-items: end;
+        }
+        .footer .hand-sign{
+            text-align: end;
+            font-weight: normal;
+            padding-left: 450px;
+        }
+        .footer .hand-sign p{
+            margin: 10px;
+            padding-bottom: 50px;
         }
         .table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 50px;
+            font-size: 11px;
         }
         .table thead tr{
             background: #f4ff8d;
@@ -68,6 +95,7 @@
 </head>
 <body>
 <header class="header">
+    <img class="img-logo" src="img/logo.png" alt="'img/logo.png">
     <div class="label-school">
         SMA NEGERI 1 SEPUTIH BANYAK
     </div>
@@ -104,6 +132,20 @@
         </tbody>
     </table>
 </section>
+<footer class="footer">
+    <div class="hand-sign">
+        <p>
+            Seputih Banyak, ............................<?php echo e($tahun); ?>
+
+            <br>
+            Kepala Tata Usaha
+        </p>
+        <p>
+            ............................................................<br>
+            NIP......................................................
+        </p>
+    </div>
+</footer>
 </body>
 </html>
 <?php /**PATH D:\project_website\github\clone\aplikasi_pegawai\resources\views/admin/laporan-pdf.blade.php ENDPATH**/ ?>

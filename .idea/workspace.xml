@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="" />
+    <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/laporan-pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/laporan-pdf.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/JQG8tK1OYFII9Mq30W6sGLS6Cg362m8B93JPjKQm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/c54yFLPzoKzoKMqBBiP7TaOu2m6uPwRlwWvOLxfO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6568a0d54ab137fab867f14043a0ea2039a5affd.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6568a0d54ab137fab867f14043a0ea2039a5affd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,17 +165,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web_gemmi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\resources\views" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\resources\views\admin" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_pensiun" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_kenaikan_pangkat" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\js\locales" />
-      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_kenaikan_gaji" />
@@ -193,7 +200,9 @@
       <workItem from="1624531778820" duration="579000" />
       <workItem from="1624592752820" duration="22914000" />
       <workItem from="1624693829010" duration="5115000" />
-      <workItem from="1624771034999" duration="15497000" />
+      <workItem from="1624771034999" duration="16209000" />
+      <workItem from="1624947658129" duration="5342000" />
+      <workItem from="1625020709455" duration="2500000" />
     </task>
     <servers />
   </component>
