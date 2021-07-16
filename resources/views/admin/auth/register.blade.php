@@ -24,10 +24,10 @@
                             <div class="col-md-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">{{('Register Pegawai')}}</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">{{('Register Admin')}}</h1>
                                     </div>
 
-                                    <form class="user" action="{{ route('register') }}" method="post">
+                                    <form class="user" action="{{ route('admin.register') }}" method="post">
                                         @csrf
 
                                         <div class="form-group">
@@ -39,118 +39,6 @@
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="text"
-                                                   class="form-control form-control-user @error('nip') is-invalid @enderror"
-                                                   name="nip" placeholder="{{('NIP')}}" value="{{ old('nip') }}">
-                                            @error('nip')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="row justify-content-md-between">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <select name="jabatan" class="form-control @error('jabatan') is-invalid @enderror" required>
-                                                                <option disabled selected hidden>Jabatan</option>
-
-                                                                @foreach($jabatan as $j)
-                                                                    <option>{{ $j }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            @error('jabatan')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <select name="pangkat" class="form-control @error('pangkat') is-invalid @enderror" required>
-                                                                <option disabled selected hidden>Pangkat</option>
-
-                                                                @foreach($pangkat as $p)
-                                                                    <option>{{ $p }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            @error('pangkat')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row justify-content-md-between">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <select name="golongan" class="form-control @error('golongan') is-invalid @enderror" required>
-                                                                <option disabled selected hidden>Golongan</option>
-
-                                                                @foreach($golongan as $g)
-                                                                    <option>{{ $g }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            @error('golongan')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <select name="status_kepegawaian" class="form-control @error('status_kepegawaian') is-invalid @enderror" required>
-                                                                <option disabled selected hidden>Status Pegawai</option>
-
-                                                                @foreach($status_kepegawaian as $sk)
-                                                                    <option>{{ $sk }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            @error('status_kepegawaian')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row justify-content-md-between">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <select name="status_tunjangan" class="form-control @error('status_tunjangan') is-invalid @enderror" required>
-                                                                <option disabled selected hidden>Status Tunjangan</option>
-
-                                                                @foreach($status_tunjangan as $st)
-                                                                    <option>{{ $st }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            @error('status_tunjangan')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <div class="form-group">
@@ -185,7 +73,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="{{ route('login') }}">{{('Sudah punya akun?')}}</a>
+                                        <a class="small" href="{{ route('admin.login') }}">{{('Sudah punya akun?')}}</a>
                                     </div>
                                 </div>
                             </div>

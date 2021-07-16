@@ -68,6 +68,10 @@
                                     </button>
 
                                 </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="{{ route('admin.register') }}">{{('Belum punya akun?')}}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
