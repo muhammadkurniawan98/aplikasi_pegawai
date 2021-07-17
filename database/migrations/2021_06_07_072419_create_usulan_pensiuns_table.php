@@ -24,6 +24,7 @@ class CreateUsulanPensiunsTable extends Migration
             $table->string('file_dokumen_taspen');
             $table->boolean('status_verifikasi')->default(false);
             $table->boolean('status_proses')->default(null);
+            $table->text('pesan')->default('belum diproses');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });

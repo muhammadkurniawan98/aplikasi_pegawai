@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\GajiRequest;
 use App\Http\Requests\SKUsulanKenaikanGajiRequest;
 use App\Models\SkUsulanKenaikanGaji;
 use App\Models\User;
@@ -40,7 +41,7 @@ class GajiController extends Controller
         return view('admin.verifikasi-usulan.index.kenaikan-gaji', ['usulanKenaikanGaji' => $usulanKenaikanGaji]);
     }
 
-    public function sendSkUsulanKenaikanGaji(SKUsulanKenaikanGajiRequest $request, $id)
+    public function sendSkUsulanKenaikanGaji(GajiRequest $request, $id)
     {
         $usulanKenaikanGaji = UsulanKenaikanGaji::find($id);
         $user = User::find($usulanKenaikanGaji->user_id);
@@ -61,6 +62,10 @@ class GajiController extends Controller
         $usulanKenaikanGaji->skUsulanPegawai()->save($skUsulanKenaikanGaji);
 
         return redirect()->route('admin.gaji.index');
+    }
+
+    public function tolakUsulanKenaikanGaji(UsulanKenaikanGajiRequest $request, $id){
+
     }
 
     public function showDetailUsulanPegawai($id)

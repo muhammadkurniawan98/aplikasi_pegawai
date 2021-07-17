@@ -23,6 +23,7 @@ class CreateUsulanKenaikanPangkatsTable extends Migration
             $table->string('file_kartu_pegawai');
             $table->boolean('status_verifikasi')->default(false);
             $table->boolean('status_proses')->default(null);
+            $table->text('pesan')->default('belum diproses');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
