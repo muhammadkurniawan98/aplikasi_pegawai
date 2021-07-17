@@ -2,42 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/downloads/pdf/usulan_kenaikan_gaji/usulan_kenaikan_gaji_199807072007451206.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/sk_usulan_kenaikan_gaji/199807072007451206/file_sk_usulan_kenaikan_gaji_199807072007451206_2021_06_30_12_25_54.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_dokumen_simpedu_199807072007451206_2021_06_30_10_42_30.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_gaji_berkala_199807072007451206_2021_06_30_10_42_30.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451206/file_pangkat_terakhir_199807072007451206_2021_06_30_10_42_30.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_dokumen_simpedu_199807072007451212_2021_06_30_10_43_59.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_gaji_berkala_199807072007451212_2021_06_30_10_43_59.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_pangkat_terakhir_199807072007451212_2021_06_30_10_43_59.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_jabatan_fungsional_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_kartu_pegawai_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_pangkat_terakhir_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_pengantar_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_pns_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451206/file_sertifikat_pendidikan_199807072007451206_2021_06_30_10_42_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_jabatan_fungsional_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_kartu_pegawai_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_pangkat_terakhir_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_pengantar_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_pns_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_pangkat/199807072007451212/file_sertifikat_pendidikan_199807072007451212_2021_06_30_10_44_28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_akta_nikah_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_dokumen_taspen_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_fotocopy_kk_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_fotocopy_ktp_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_karis_karsu_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_kartu_pegawai_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451206/file_sk_pns_199807072007451206_2021_06_30_10_43_24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_akta_nikah_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_dokumen_taspen_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_fotocopy_kk_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_fotocopy_ktp_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_karis_karsu_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_kartu_pegawai_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_pensiun/199807072007451212/file_sk_pns_199807072007451212_2021_06_30_10_44_56.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072328_create_usulan_kenaikan_gajis_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072328_create_usulan_kenaikan_gajis_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072402_create_usulan_kenaikan_pangkats_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072402_create_usulan_kenaikan_pangkats_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072419_create_usulan_pensiuns_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072419_create_usulan_pensiuns_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,11 +169,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project_website\github\clone\aplikasi_pegawai\resources\views" />
-      <recent name="D:\project_website\github\clone\aplikasi_pegawai\resources\views\admin" />
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\downloads\pdf\usulan_pensiun" />
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\downloads\pdf\usulan_kenaikan_pangkat" />
+      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\downloads\pdf\usulan_kenaikan_gaji" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_pensiun" />
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_kenaikan_pangkat" />
-      <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\js\locales" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project_website\github\clone\aplikasi_pegawai\public\uploads\pdf\usulan_kenaikan_gaji" />
@@ -235,7 +203,7 @@
       <workItem from="1625020709455" duration="3071000" />
       <workItem from="1626460296593" duration="1319000" />
       <workItem from="1626467976939" duration="1200000" />
-      <workItem from="1626493131231" duration="757000" />
+      <workItem from="1626493131231" duration="1752000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,7 @@ class CreateUsulanPensiunsTable extends Migration
             $table->string('file_akta_nikah');
             $table->string('file_dokumen_taspen');
             $table->boolean('status_verifikasi')->default(false);
+            $table->boolean('status_proses')->default(null);
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
