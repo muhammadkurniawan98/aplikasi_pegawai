@@ -61,6 +61,7 @@
                                             <span class="text-black-90">Verifikasi</span>
                                         </a>
                                         @include('admin.layouts.includes.verifikasi-usulan_kenaikan_pangkat')
+                                        @include('admin.layouts.includes.proccess-usulan_kenaikan_pangkat')
                                     </div>
                                 </div>
                             </div>
