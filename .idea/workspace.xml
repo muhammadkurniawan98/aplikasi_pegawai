@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072328_create_usulan_kenaikan_gajis_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072328_create_usulan_kenaikan_gajis_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072402_create_usulan_kenaikan_pangkats_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072402_create_usulan_kenaikan_pangkats_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_07_072419_create_usulan_pensiuns_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_072419_create_usulan_pensiuns_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,6 +201,7 @@
       <workItem from="1626460296593" duration="1319000" />
       <workItem from="1626467976939" duration="1200000" />
       <workItem from="1626493131231" duration="1752000" />
+      <workItem from="1626502151370" duration="1429000" />
     </task>
     <servers />
   </component>
