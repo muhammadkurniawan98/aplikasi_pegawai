@@ -71,6 +71,10 @@ class PensiunController extends Controller
         return redirect()->route('admin.pensiun.index');
     }
 
+    public function tolakUsulanKenaikanGaji(PensiunRequest $request, $id){
+
+    }
+
     public function showDetailUsulanPegawai($id){
         $usulanPensiun = UsulanPensiun::where('usulan_pensiun.id', $id)
             ->leftJoin('users', 'users.id', '=', 'usulan_pensiun.user_id')

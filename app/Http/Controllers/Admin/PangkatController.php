@@ -75,6 +75,10 @@ class PangkatController extends Controller
         return redirect()->route('admin.pangkat.index');
     }
 
+    public function tolakUsulanKenaikanGaji(PangkatRequest $request, $id){
+
+    }
+
     public function showDetailUsulanPegawai($id){
         $usulanKenaikanPangkat = UsulanKenaikanPangkat::where('usulan_kenaikan_pangkat.id', $id)
             ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_pangkat.user_id')

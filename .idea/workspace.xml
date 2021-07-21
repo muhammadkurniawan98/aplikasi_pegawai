@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Models/UsulanKenaikanGaji.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UsulanKenaikanGaji.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UsulanKenaikanPangkat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UsulanKenaikanPangkat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/GajiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GajiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PangkatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PangkatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PensiunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PensiunController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +205,7 @@
       <workItem from="1626493131231" duration="1752000" />
       <workItem from="1626502151370" duration="2103000" />
       <workItem from="1626523880440" duration="1966000" />
-      <workItem from="1626852769304" duration="1092000" />
+      <workItem from="1626852769304" duration="1391000" />
     </task>
     <servers />
   </component>

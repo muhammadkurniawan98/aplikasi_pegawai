@@ -64,7 +64,7 @@ class GajiController extends Controller
         return redirect()->route('admin.gaji.index');
     }
 
-    public function tolakUsulanKenaikanGaji(UsulanKenaikanGajiRequest $request, $id){
+    public function tolakUsulanKenaikanGaji(GajiRequest $request, $id){
 
     }
 
