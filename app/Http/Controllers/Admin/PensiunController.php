@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PensiunRequest;
 use App\Http\Requests\SKUsulanPensiunRequest;
 use App\Models\SkUsulanPensiun;
 use App\Models\User;

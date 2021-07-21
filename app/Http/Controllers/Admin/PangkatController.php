@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PangkatRequest;
 use App\Http\Requests\SKUsulanKenaikanPangkatRequest;
 use App\Models\SkUsulanKenaikanPangkat;
 use App\Models\User;
