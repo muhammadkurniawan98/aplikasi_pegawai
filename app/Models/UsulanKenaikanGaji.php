@@ -16,6 +16,7 @@ class UsulanKenaikanGaji extends Model
         'file_gaji_berkala',
         'file_dokumen_simpedu',
         'status_verifikasi',
+        'status_proses',
         'user_id',
     ];
 

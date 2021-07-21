@@ -20,6 +20,7 @@ class UsulanPensiun extends Model
         'file_akta_nikah',
         'file_dokumen_taspen',
         'status_verifikasi',
+        'status_proses',
         'user_id',
     ];
 

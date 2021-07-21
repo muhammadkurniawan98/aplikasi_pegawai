@@ -19,6 +19,7 @@ class UsulanKenaikanPangkat extends Model
         'file_sertifikat_pendidikan',
         'file_kartu_pegawai',
         'status_verifikasi',
+        'status_proses',
         'user_id',
     ];
 
