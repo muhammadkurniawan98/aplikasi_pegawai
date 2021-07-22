@@ -76,7 +76,7 @@ class PangkatController extends Controller
         return redirect()->route('admin.pangkat.index');
     }
 
-    public function tolakUsulanKenaikanPangkat(PangkatRequest $request, $id){
+    public function tolakUsulanKenaikanPangkat($id){
 
     }
 

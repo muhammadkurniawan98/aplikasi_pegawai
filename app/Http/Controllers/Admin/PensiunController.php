@@ -72,7 +72,7 @@ class PensiunController extends Controller
         return redirect()->route('admin.pensiun.index');
     }
 
-    public function tolakUsulanPensiun(PensiunRequest $request, $id){
+    public function tolakUsulanPensiun($id){
 
     }
 

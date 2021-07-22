@@ -61,7 +61,6 @@
                                             <span class="text-black-90">Verifikasi</span>
                                         </a>
                                         @include('admin.layouts.includes.verifikasi-usulan_kenaikan_gaji')
-                                        @include('admin.layouts.includes.proses-usulan_kenaikan_gaji')
                                     </div>
                                 </div>
                             </div>
