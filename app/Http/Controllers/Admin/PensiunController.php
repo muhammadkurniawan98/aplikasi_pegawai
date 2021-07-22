@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PensiunRequest;
 use App\Http\Requests\SKUsulanPensiunRequest;
 use App\Models\SkUsulanPensiun;
 use App\Models\User;
+use App\Models\UsulanKenaikanPangkat;
 use App\Models\UsulanPensiun;
 use Illuminate\Support\Facades\File;
 
@@ -20,6 +20,7 @@ class PensiunController extends Controller
     public function index()
     {
         $usulanPensiun = UsulanPensiun::where('status_verifikasi', 0)
+            ->where('status_proses', 'belum diproses')
             ->leftJoin('users', 'users.id', '=', 'usulan_pensiun.user_id')
             ->select(
                 'usulan_pensiun.id',
@@ -55,7 +56,8 @@ class PensiunController extends Controller
         ]);
 
         $user->update([
-            'status_kepegawaian' => $this->status_kepegawaian[1]
+            'status_kepegawaian' => true,
+            'status_proses' => 'proses diterima'
         ]);
 
         $fileDir = $this->makeDir('sk_usulan_pensiun', $user->nip);
@@ -73,7 +75,20 @@ class PensiunController extends Controller
     }
 
     public function tolakUsulanPensiun($id){
-
+        $usulanPensiun = UsulanPensiun::find($id);
+        $user = User::find($usulanPensiun->user_id);
+        $fileDir = $this->makeDir('usulan_pensiun', $user->nip);
+        unlink($fileDir.$usulanPensiun->file_sk_pns);
+        unlink($fileDir.$usulanPensiun->file_karis_karsu);
+        unlink($fileDir.$usulanPensiun->file_kartu_pegawai);
+        unlink($fileDir.$usulanPensiun->file_fotocopy_ktp);
+        unlink($fileDir.$usulanPensiun->file_fotocopy_kk);
+        unlink($fileDir.$usulanPensiun->file_akta_nikah);
+        unlink($fileDir.$usulanPensiun->file_dokumen_taspen);
+        $usulanPensiun->update([
+            'status_proses' => 'proses ditolak'
+        ]);
+        return redirect(route('admin.pangkat.index'))->with('success', 'Usulan pensiun sudah ditolak');
     }
 
     public function showDetailUsulanPegawai($id){

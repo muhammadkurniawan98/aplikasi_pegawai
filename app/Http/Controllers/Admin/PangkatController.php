@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PangkatRequest;
 use App\Http\Requests\SKUsulanKenaikanPangkatRequest;
 use App\Models\SkUsulanKenaikanPangkat;
 use App\Models\User;
@@ -20,6 +19,7 @@ class PangkatController extends Controller
     public function index()
     {
         $usulanKenaikanPangkat = UsulanKenaikanPangkat::where('status_verifikasi', 0)
+            ->where('status_proses', 'belum diproses')
             ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_pangkat.user_id')
             ->select(
                 'usulan_kenaikan_pangkat.id',
@@ -51,6 +51,7 @@ class PangkatController extends Controller
 
         $usulanKenaikanPangkat->update([
             'status_verifikasi' => true,
+            'status_proses' => 'proses diterima'
         ]);
 
         $pangkat = array_search($user->pangkat, $this->pangkat);
@@ -77,7 +78,19 @@ class PangkatController extends Controller
     }
 
     public function tolakUsulanKenaikanPangkat($id){
-
+        $usulanKenaikanPangkat = UsulanKenaikanPangkat::find($id);
+        $user = User::find($usulanKenaikanPangkat->user_id);
+        $fileDir = $this->makeDir('usulan_kenaikan_pangkat', $user->nip);
+        unlink($fileDir.$usulanKenaikanPangkat->file_pengantar);
+        unlink($fileDir.$usulanKenaikanPangkat->file_pns);
+        unlink($fileDir.$usulanKenaikanPangkat->file_pangkat_terakhir);
+        unlink($fileDir.$usulanKenaikanPangkat->file_jabatan_fungsional);
+        unlink($fileDir.$usulanKenaikanPangkat->file_sertifikat_pendidikan);
+        unlink($fileDir.$usulanKenaikanPangkat->file_kartu_pegawai);
+        $usulanKenaikanPangkat->update([
+            'status_proses' => 'proses ditolak'
+        ]);
+        return redirect(route('admin.pensiun.index'))->with('success', 'Usulan kenaikan pangkat sudah ditolak');
     }
 
     public function showDetailUsulanPegawai($id){

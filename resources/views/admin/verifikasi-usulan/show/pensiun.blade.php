@@ -60,6 +60,14 @@
                                             </span>
                                             <span class="text-black-90">Verifikasi</span>
                                         </a>
+                                        <a href="#"
+                                           class="btn btn-danger btn-icon-split btn-sm"
+                                           data-toggle="modal" data-target="#tolak_usulan_pensiun">
+                                            <span class="icon text-black-90">
+                                                <i class="fas fa-times"></i>
+                                            </span>
+                                            <span class="text-black-90">Tolak</span>
+                                        </a>
                                         @include('admin.layouts.includes.verifikasi-usulan_pensiun')
                                         @include('admin.layouts.includes.tolak-usulan_pensiun')
                                     </div>

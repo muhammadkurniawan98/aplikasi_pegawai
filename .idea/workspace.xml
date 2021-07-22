@@ -3,9 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="e866da56-9119-4b1b-961b-8c07a56f7d6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_kenaikan_gaji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_kenaikan_gaji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/kenaikan-gaji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/kenaikan-gaji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c28ad212498019eeb1012014a17871f56ffae28d.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c28ad212498019eeb1012014a17871f56ffae28d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/GajiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GajiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LaporanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PangkatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PangkatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PensiunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PensiunController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_dokumen_simpedu_199807072007451212_2021_07_23_01_46_58.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_gaji_berkala_199807072007451212_2021_07_23_01_46_58.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/usulan_kenaikan_gaji/199807072007451212/file_pangkat_terakhir_199807072007451212_2021_07_23_01_46_58.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_kenaikan_pangkat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_kenaikan_pangkat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_pensiun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/tolak-usulan_pensiun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/kenaikan-gaji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/kenaikan-gaji.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/kenaikan-pangkat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/kenaikan-pangkat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/pensiun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/index/pensiun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/kenaikan-pangkat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/kenaikan-pangkat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/pensiun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/verifikasi-usulan/show/pensiun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/usulan/index/kenaikan-gaji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/usulan/index/kenaikan-gaji.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/usulan/index/kenaikan-pangkat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/usulan/index/kenaikan-pangkat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/usulan/index/pensiun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/usulan/index/pensiun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/ElHkrlfMpJ8km2emfPZznkqo78a6BdqTeOFjOTjn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/OKr5xPJD7hin9s4J94LW0K4b8YBqjOeH164PS5lf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/SiVWhUe1cxgHETuMKQSph3IKszf6fwCr8FdHKzpz" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/SiVWhUe1cxgHETuMKQSph3IKszf6fwCr8FdHKzpz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/535045efb045b79a7a98ae101d19ebffa197ef23.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/535045efb045b79a7a98ae101d19ebffa197ef23.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/57373694c5e7cdeef86e7f5b83bb086a7e587e67.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/57373694c5e7cdeef86e7f5b83bb086a7e587e67.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/64745b6908c795e4c69c4973176d590ac204b7b0.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/64745b6908c795e4c69c4973176d590ac204b7b0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/934d51bd5ea2f8e57b97c56bc76c95f9848b23ed.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/934d51bd5ea2f8e57b97c56bc76c95f9848b23ed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/d434f60d7b8e33f361ccb9ead328a7a3c3aad472.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d434f60d7b8e33f361ccb9ead328a7a3c3aad472.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f865407572b04b0088708494563d454183036eea.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f865407572b04b0088708494563d454183036eea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +231,7 @@
       <workItem from="1626502151370" duration="2103000" />
       <workItem from="1626523880440" duration="1966000" />
       <workItem from="1626852769304" duration="5314000" />
-      <workItem from="1626975327880" duration="3839000" />
+      <workItem from="1626975327880" duration="9946000" />
     </task>
     <servers />
   </component>

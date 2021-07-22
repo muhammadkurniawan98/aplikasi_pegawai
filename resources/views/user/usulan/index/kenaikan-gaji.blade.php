@@ -8,12 +8,17 @@
 
             @if($usulanKenaikanGaji != null)
                 <a href="{{ route('gaji.create') }}"
-                   class="btn btn-primary btn-icon-split btn-sm @if($usulanKenaikanGaji->status_verifikasi == 0) {{ 'disabled' }} @endif">
+                   class="btn btn-primary btn-icon-split btn-sm @if($usulanKenaikanGaji->status_proses == 'belum diproses') {{ 'disabled' }} @endif">
                     <span class="icon text-white">
                         <i class="far fa-plus-square"></i>
                     </span>
                     <span class="text-black-90">Buat Pengajuan</span>
                 </a>
+                @if($usulanKenaikanGaji->status_proses == 'proses ditolak')
+                    <div class="alert-danger">
+                        Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
+                    </div>
+                @endif
             @else
                 <a href="{{ route('gaji.create') }}"
                    class="btn btn-primary btn-icon-split btn-sm">
@@ -29,6 +34,7 @@
                     {{ Session::get('success') }}
                 </div>
             @endif
+
             <br><br><br>
 
             <div class="card o-hidden border-0 shadow-none">

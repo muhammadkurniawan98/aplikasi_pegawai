@@ -4,6 +4,11 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            @if(Session::has('success'))
+                <div class="alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
             <div class="card o-hidden border-0 shadow-none">
                 <div class="card-header">
                     <div class="row">

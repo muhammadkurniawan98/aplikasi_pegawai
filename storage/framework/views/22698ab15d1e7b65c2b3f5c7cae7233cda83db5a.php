@@ -1,6 +1,5 @@
-@extends('admin.layouts.app')
-@section('admin-pangkat', 'active')
-@section('content')
+<?php $__env->startSection('admin-pangkat', 'active'); ?>
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -13,39 +12,39 @@
                             <div class="col-md-6">
                                 <div class="card o-hidden border-0 shadow-none">
                                     <div class="card-header d-flex justify-content-center">
-                                        <img src="{{ asset(profile_picture($usulanKenaikanPangkat->nip)) }}" width="79%">
+                                        <img src="<?php echo e(asset(profile_picture($usulanKenaikanPangkat->nip))); ?>" width="79%">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="card o-hidden border-0 shadow-none">
                                     <div class="card-header">
-                                        <h6 class="card-title font-weight-normal">{{ ('Detail Informasi Pegawai') }}</h6>
+                                        <h6 class="card-title font-weight-normal"><?php echo e(('Detail Informasi Pegawai')); ?></h6>
                                     </div>
                                     <div class="card-body">
                                         <dl class="row">
                                             <dd class="col-sm-5 font-weight-normal">Nama</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->nama }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->nama); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">Jabatan</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->jabatan }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->jabatan); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">Pangkat</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->pangkat }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->pangkat); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">Golongan</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->golongan }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->golongan); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">Status Kepegawaian</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->status_kepegawaian }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->status_kepegawaian); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">Status Tunjangan</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->status_tunjangan }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->status_tunjangan); ?></dd>
 
                                             <dd class="col-sm-5 font-weight-normal">NIP</dd>
-                                            <dd class="col-sm-7 font-weight-light">{{ $usulanKenaikanPangkat->nip }}</dd>
+                                            <dd class="col-sm-7 font-weight-light"><?php echo e($usulanKenaikanPangkat->nip); ?></dd>
                                         </dl>
-                                        <a href="{{ route('admin.pangkat.download', $usulanKenaikanPangkat->nip) }}"
+                                        <a href="<?php echo e(route('admin.pangkat.download', $usulanKenaikanPangkat->nip)); ?>"
                                            class="btn btn-primary btn-icon-split btn-sm">
                                             <span class="icon text-black-90">
                                                 <i class="fas fa-file-download"></i>
@@ -68,8 +67,8 @@
                                             </span>
                                             <span class="text-black-90">Tolak</span>
                                         </a>
-                                        @include('admin.layouts.includes.verifikasi-usulan_kenaikan_pangkat')
-                                        @include('admin.layouts.includes.tolak-usulan_kenaikan_pangkat')
+                                        <?php echo $__env->make('admin.layouts.includes.verifikasi-usulan_kenaikan_pangkat', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                                        <?php echo $__env->make('admin.layouts.includes.tolak-usulan_kenaikan_pangkat', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -79,4 +78,6 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\project_website\github\clone\aplikasi_pegawai\resources\views/admin/verifikasi-usulan/show/kenaikan-pangkat.blade.php ENDPATH**/ ?>

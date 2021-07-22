@@ -3,6 +3,12 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                <?php if(Session::has('success')): ?>
+                    <div class="alert-success">
+                        <?php echo e(Session::get('success')); ?>
+
+                    </div>
+                <?php endif; ?>
                 <div class="card o-hidden border-0 shadow-none">
                     <div class="card-header">
                         <div class="row">

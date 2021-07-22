@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\GajiRequest;
 use App\Http\Requests\SKUsulanKenaikanGajiRequest;
 use App\Models\SkUsulanKenaikanGaji;
 use App\Models\User;
@@ -21,6 +20,7 @@ class GajiController extends Controller
     public function index()
     {
         $usulanKenaikanGaji = UsulanKenaikanGaji::where('status_verifikasi', 0)
+            ->where('status_proses', 'belum diproses')
             ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_gaji.user_id')
             ->select(
                 'usulan_kenaikan_gaji.id',
@@ -41,13 +41,14 @@ class GajiController extends Controller
         return view('admin.verifikasi-usulan.index.kenaikan-gaji', ['usulanKenaikanGaji' => $usulanKenaikanGaji]);
     }
 
-    public function sendSkUsulanKenaikanGaji(GajiRequest $request, $id)
+    public function sendSkUsulanKenaikanGaji(SKUsulanKenaikanGajiRequest $request, $id)
     {
         $usulanKenaikanGaji = UsulanKenaikanGaji::find($id);
         $user = User::find($usulanKenaikanGaji->user_id);
 
         $usulanKenaikanGaji->update([
             'status_verifikasi' => true,
+            'status_proses' => 'proses diterima'
         ]);
 
         $fileDir = $this->makeDir('sk_usulan_kenaikan_gaji', $user->nip);
@@ -65,7 +66,16 @@ class GajiController extends Controller
     }
 
     public function tolakUsulanKenaikanGaji($id){
-
+        $usulanKenaikanGaji = UsulanKenaikanGaji::find($id);
+        $user = User::find($usulanKenaikanGaji->user_id);
+        $fileDir = $this->makeDir('usulan_kenaikan_gaji', $user->nip);
+        unlink($fileDir.$usulanKenaikanGaji->file_pangkat_terakhir);
+        unlink($fileDir.$usulanKenaikanGaji->file_gaji_berkala);
+        unlink($fileDir.$usulanKenaikanGaji->file_dokumen_simpedu);
+        $usulanKenaikanGaji->update([
+            'status_proses' => 'proses ditolak'
+        ]);
+        return redirect(route('admin.gaji.index'))->with('success', 'Usulan kenaikan gaji sudah ditolak');
     }
 
     public function showDetailUsulanPegawai($id)

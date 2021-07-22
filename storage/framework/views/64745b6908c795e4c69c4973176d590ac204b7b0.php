@@ -7,12 +7,18 @@
 
                 <?php if($usulanPensiun != null): ?>
                     <a href="<?php echo e(route('pensiun.create')); ?>"
-                       class="btn btn-primary btn-icon-split btn-sm <?php if($usulanPensiun->status_verifikasi == 0): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
+                       class="btn btn-primary btn-icon-split btn-sm <?php if($usulanPensiun->status_proses == 'belum diproses'): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
                         <span class="icon text-white">
                             <i class="far fa-plus-square"></i>
                         </span>
                         <span class="text-black-90">Buat Pengajuan</span>
                     </a>
+
+                    <?php if($usulanPensiun->status_proses == 'proses ditolak'): ?>
+                        <div class="alert-danger">
+                            Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
+                        </div>
+                    <?php endif; ?>
                 <?php else: ?>
                     <a href="<?php echo e(route('pensiun.create')); ?>"
                        class="btn btn-primary btn-icon-split btn-sm">

@@ -8,12 +8,18 @@
 
                 @if($usulanPensiun != null)
                     <a href="{{ route('pensiun.create') }}"
-                       class="btn btn-primary btn-icon-split btn-sm @if($usulanPensiun->status_verifikasi == 0) {{ 'disabled' }} @endif">
+                       class="btn btn-primary btn-icon-split btn-sm @if($usulanPensiun->status_proses == 'belum diproses') {{ 'disabled' }} @endif">
                         <span class="icon text-white">
                             <i class="far fa-plus-square"></i>
                         </span>
                         <span class="text-black-90">Buat Pengajuan</span>
                     </a>
+
+                    @if($usulanPensiun->status_proses == 'proses ditolak')
+                        <div class="alert-danger">
+                            Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
+                        </div>
+                    @endif
                 @else
                     <a href="{{ route('pensiun.create') }}"
                        class="btn btn-primary btn-icon-split btn-sm">
