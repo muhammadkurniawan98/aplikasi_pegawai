@@ -60,7 +60,16 @@
                                             </span>
                                             <span class="text-black-90">Verifikasi</span>
                                         </a>
+                                        <a href="#"
+                                           class="btn btn-danger btn-icon-split btn-sm"
+                                           data-toggle="modal" data-target="#usulanKenaikanGaji">
+                                            <span class="icon text-black-90">
+                                                <i class="fas fa-"></i>
+                                            </span>
+                                            <span class="text-black-90">Verifikasi</span>
+                                        </a>
                                         @include('admin.layouts.includes.verifikasi-usulan_kenaikan_gaji')
+                                        @include('admin.layouts.includes.tolak-usulan_kenaikan_gaji')
                                     </div>
                                 </div>
                             </div>
