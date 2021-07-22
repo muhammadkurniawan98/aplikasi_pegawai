@@ -9,7 +9,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
                 <a id="submit" class="btn btn-danger">Ya</a>
             </div>
         </div>

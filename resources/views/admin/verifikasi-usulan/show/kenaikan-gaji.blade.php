@@ -62,11 +62,11 @@
                                         </a>
                                         <a href="#"
                                            class="btn btn-danger btn-icon-split btn-sm"
-                                           data-toggle="modal" data-target="#usulanKenaikanGaji">
+                                           data-toggle="modal" data-target="#tolak_usulan_kenaikan_gaji">
                                             <span class="icon text-black-90">
-                                                <i class="fas fa-"></i>
+                                                <i class="fas fa-times"></i>
                                             </span>
-                                            <span class="text-black-90">Verifikasi</span>
+                                            <span class="text-black-90">Tolak</span>
                                         </a>
                                         @include('admin.layouts.includes.verifikasi-usulan_kenaikan_gaji')
                                         @include('admin.layouts.includes.tolak-usulan_kenaikan_gaji')
