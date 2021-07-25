@@ -15,10 +15,12 @@ class Controller extends BaseController
         'I/a', 'I/b', 'I/c', 'I/d',
         'II/a', 'II/b', 'II/c', 'II/d',
         'III/a', 'III/b', 'III/c', 'III/d',
-        'IIII/a', 'IIII/b', 'IIII/c', 'IIII/d',
+        'IV/a', 'IV/b', 'IV/c', 'IV/d',
     ];
 
     protected $jabatan = [
+        'Kepala Sekolah',
+        'Wakil Kepala Sekolah',
         'Kepala Tata Usaha',
         'Bendahara Gaji',
         'Bendahara Rutin',

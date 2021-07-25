@@ -121,13 +121,23 @@
         <tbody>
         <?php $i = 1?>
         <?php $__currentLoopData = $laporan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <tr>
-                <td class="td-center"><?php echo e($i++); ?></td>
-                <td class="td-left"><?php echo e($l->nama); ?></td>
-                <td class="td-center"><?php echo e($l->nip); ?></td>
-                <td class="td-center <?php if($l->status_verifikasi == 0): ?> alert-danger <?php else: ?> alert-success <?php endif; ?>"><?php echo e($l->status_verifikasi == 0? 'belum diproses':'sudah diproses'); ?></td>
-                <td class="td-center"><?php echo e($l->created_at); ?></td>
-            </tr>
+            <?php if($l->status_proses == 'proses diterima'): ?>
+                <tr>
+                    <td class="td-center"><?php echo e($i++); ?></td>
+                    <td class="td-left"><?php echo e($l->nama); ?></td>
+                    <td class="td-center"><?php echo e($l->nip); ?></td>
+                    <td class="td-center <?php if($l->status_verifikasi == 0): ?> alert-danger <?php else: ?> alert-success <?php endif; ?>"><?php echo e($l->status_verifikasi == 0? 'belum diproses':'sudah diproses'); ?></td>
+                    <td class="td-center"><?php echo e($l->created_at); ?></td>
+                </tr>
+            <?php elseif($l->status_proses == 'belum diproses'): ?>
+                <tr>
+                    <td class="td-center"><?php echo e($i++); ?></td>
+                    <td class="td-left"><?php echo e($l->nama); ?></td>
+                    <td class="td-center"><?php echo e($l->nip); ?></td>
+                    <td class="td-center <?php if($l->status_verifikasi == 0): ?> alert-danger <?php else: ?> alert-success <?php endif; ?>"><?php echo e($l->status_verifikasi == 0? 'belum diproses':'sudah diproses'); ?></td>
+                    <td class="td-center"><?php echo e($l->created_at); ?></td>
+                </tr>
+            <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
     </table>

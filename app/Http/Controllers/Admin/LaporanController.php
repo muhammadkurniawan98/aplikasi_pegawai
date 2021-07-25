@@ -21,12 +21,12 @@ class LaporanController extends Controller
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
 
         $laporan = UsulanKenaikanGaji::where('usulan_kenaikan_gaji.created_at', 'like', '%'.$tahun.'%')
-                                    ->where('usulan_kenaikan_gaji.status_proses', 'belum diproses')
                                     ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_gaji.user_id')
                                     ->select(
                                         'users.nama',
                                         'users.nip',
                                         'usulan_kenaikan_gaji.status_verifikasi',
+                                        'usulan_kenaikan_gaji.status_proses',
                                         'usulan_kenaikan_gaji.created_at',
                                     )
                                     ->get();
@@ -46,12 +46,12 @@ class LaporanController extends Controller
     {
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
         $laporan = UsulanKenaikanPangkat::where('usulan_kenaikan_pangkat.created_at', 'like', '%'.$tahun.'%')
-                                        ->where('usulan_kenaikan_pangkat.status_proses', 'belum diproses')
                                         ->leftJoin('users', 'users.id', '=', 'usulan_kenaikan_pangkat.user_id')
                                         ->select(
                                             'users.nama',
                                             'users.nip',
                                             'usulan_kenaikan_pangkat.status_verifikasi',
+                                            'usulan_kenaikan_pangkat.status_proses',
                                             'usulan_kenaikan_pangkat.created_at',
                                         )
                                         ->get();
@@ -71,12 +71,12 @@ class LaporanController extends Controller
     {
         $tahun = empty(trim($tahun))? date('Y'):$tahun;
         $laporan = UsulanPensiun::where('usulan_pensiun.created_at', 'like', '%'.$tahun.'%')
-                                ->where('usulan_pensiun.status_proses', 'belum diproses')
                                 ->leftJoin('users', 'users.id', '=', 'usulan_pensiun.user_id')
                                 ->select(
                                     'users.nama',
                                     'users.nip',
                                     'usulan_pensiun.status_verifikasi',
+                                    'usulan_pensiun.status_proses',
                                     'usulan_pensiun.created_at',
                                 )
                                 ->get();

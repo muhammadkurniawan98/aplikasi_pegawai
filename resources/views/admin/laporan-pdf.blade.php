@@ -121,13 +121,23 @@
         <tbody>
         <?php $i = 1?>
         @foreach($laporan as $l)
-            <tr>
-                <td class="td-center">{{ $i++ }}</td>
-                <td class="td-left">{{ $l->nama }}</td>
-                <td class="td-center">{{ $l->nip }}</td>
-                <td class="td-center @if($l->status_verifikasi == 0) alert-danger @else alert-success @endif">{{ $l->status_verifikasi == 0? 'belum diproses':'sudah diproses' }}</td>
-                <td class="td-center">{{ $l->created_at }}</td>
-            </tr>
+            @if($l->status_proses == 'proses diterima')
+                <tr>
+                    <td class="td-center">{{ $i++ }}</td>
+                    <td class="td-left">{{ $l->nama }}</td>
+                    <td class="td-center">{{ $l->nip }}</td>
+                    <td class="td-center @if($l->status_verifikasi == 0) alert-danger @else alert-success @endif">{{ $l->status_verifikasi == 0? 'belum diproses':'sudah diproses' }}</td>
+                    <td class="td-center">{{ $l->created_at }}</td>
+                </tr>
+            @elseif($l->status_proses == 'belum diproses')
+                <tr>
+                    <td class="td-center">{{ $i++ }}</td>
+                    <td class="td-left">{{ $l->nama }}</td>
+                    <td class="td-center">{{ $l->nip }}</td>
+                    <td class="td-center @if($l->status_verifikasi == 0) alert-danger @else alert-success @endif">{{ $l->status_verifikasi == 0? 'belum diproses':'sudah diproses' }}</td>
+                    <td class="td-center">{{ $l->created_at }}</td>
+                </tr>
+            @endif
         @endforeach
         </tbody>
     </table>
