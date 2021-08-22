@@ -5,7 +5,15 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
-
+            @if(auth()->user()->status_kepegawaian == 'Pensiun')
+                <a href="{{ route('gaji.create') }}"
+                   class="btn btn-primary btn-icon-split btn-sm disabled">
+                    <span class="icon text-white">
+                        <i class="far fa-plus-square"></i>
+                    </span>
+                    <span class="text-black-90">Buat Pengajuan</span>
+                </a>
+            @else
                 @if($usulanPensiun != null)
                     <a href="{{ route('pensiun.create') }}"
                        class="btn btn-primary btn-icon-split btn-sm @if($usulanPensiun->status_proses == 'belum diproses') {{ 'disabled' }} @endif">
@@ -35,7 +43,7 @@
                         {{ Session::get('success') }}
                     </div>
                 @endif
-
+            @endif
                 <br><br><br>
 
                 <div class="card o-hidden border-0 shadow-none">

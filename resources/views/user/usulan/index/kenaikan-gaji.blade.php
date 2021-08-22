@@ -6,29 +6,38 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
-            @if($usulanKenaikanGaji != null)
+            @if(auth()->user()->status_kepegawaian == 'Pensiun')
                 <a href="{{ route('gaji.create') }}"
-                   class="btn btn-primary btn-icon-split btn-sm @if($usulanKenaikanGaji->status_proses == 'belum diproses') {{ 'disabled' }} @endif">
+                   class="btn btn-primary btn-icon-split btn-sm disabled">
                     <span class="icon text-white">
                         <i class="far fa-plus-square"></i>
                     </span>
                     <span class="text-black-90">Buat Pengajuan</span>
                 </a>
-                @if($usulanKenaikanGaji->status_proses == 'proses ditolak')
-                    <div class="alert-danger">
-                        Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
-                    </div>
-                @endif
             @else
-                <a href="{{ route('gaji.create') }}"
-                   class="btn btn-primary btn-icon-split btn-sm">
-                    <span class="icon text-white">
-                        <i class="far fa-plus-square"></i>
-                    </span>
-                    <span class="text-black-90">Buat Pengajuan</span>
-                </a>
+                @if($usulanKenaikanGaji != null)
+                    <a href="{{ route('gaji.create') }}"
+                    class="btn btn-primary btn-icon-split btn-sm @if($usulanKenaikanGaji->status_proses == 'belum diproses') {{ 'disabled' }} @endif">
+                        <span class="icon text-white">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="text-black-90">Buat Pengajuan</span>
+                    </a>
+                    @if($usulanKenaikanGaji->status_proses == 'proses ditolak')
+                        <div class="alert-danger">
+                            Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
+                        </div>
+                    @endif
+                @else
+                    <a href="{{ route('gaji.create') }}"
+                    class="btn btn-primary btn-icon-split btn-sm">
+                        <span class="icon text-white">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="text-black-90">Buat Pengajuan</span>
+                    </a>
+                @endif
             @endif
-
             @if(Session::has('success'))
                 <div class="alert-success">
                     {{ Session::get('success') }}

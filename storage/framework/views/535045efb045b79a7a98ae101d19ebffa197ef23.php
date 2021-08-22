@@ -4,6 +4,15 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
+            <?php if(auth()->user()->status_kepegawaian == 'Pensiun'): ?>
+                <a href="<?php echo e(route('gaji.create')); ?>"
+                   class="btn btn-primary btn-icon-split btn-sm disabled">
+                    <span class="icon text-white">
+                        <i class="far fa-plus-square"></i>
+                    </span>
+                    <span class="text-black-90">Buat Pengajuan</span>
+                </a>
+            <?php else: ?>
                 <?php if($usulanKenaikanPangkat != null): ?>
                     <a href="<?php echo e(route('pangkat.create')); ?>"
                        class="btn btn-primary btn-icon-split btn-sm <?php if($usulanKenaikanPangkat->status_proses == 'belum diproses'): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
@@ -26,7 +35,7 @@
                         <span class="text-black-90">Buat Pengajuan</span>
                     </a>
                 <?php endif; ?>
-
+            <?php endif; ?>
                 <?php if(Session::has('success')): ?>
                     <div class="alert-success">
                         <?php echo e(Session::get('success')); ?>

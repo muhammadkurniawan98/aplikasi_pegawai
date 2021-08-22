@@ -53,11 +53,11 @@ class PensiunController extends Controller
 
         $usulanPensiun->update([
             'status_verifikasi' => true,
+            'status_proses' => 'proses diterima'
         ]);
 
         $user->update([
-            'status_kepegawaian' => true,
-            'status_proses' => 'proses diterima'
+            'status_kepegawaian' => $this->status_kepegawaian[1]
         ]);
 
         $fileDir = $this->makeDir('sk_usulan_pensiun', $user->nip);

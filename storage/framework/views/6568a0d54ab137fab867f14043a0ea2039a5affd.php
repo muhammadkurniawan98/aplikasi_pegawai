@@ -91,6 +91,10 @@
         .alert-success{
             background: #a1f575;
         }
+        .email{
+            text-decoration: none;
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +105,9 @@
     </div>
     <div class="label-address">
         <small>Jl. Raya Sri Basuki No. 01 Seputih Banyak 34156 Telp. (0725) 7623325</small>
+    </div>
+    <div class="label-address">
+        <small>E-mail : <a class="email">smansa.seba@gmail.com</a></small>
     </div>
 </header>
 <hr>

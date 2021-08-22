@@ -5,29 +5,38 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
-            <?php if($usulanKenaikanGaji != null): ?>
+            <?php if(auth()->user()->status_kepegawaian == 'Pensiun'): ?>
                 <a href="<?php echo e(route('gaji.create')); ?>"
-                   class="btn btn-primary btn-icon-split btn-sm <?php if($usulanKenaikanGaji->status_proses == 'belum diproses'): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
+                   class="btn btn-primary btn-icon-split btn-sm disabled">
                     <span class="icon text-white">
                         <i class="far fa-plus-square"></i>
                     </span>
                     <span class="text-black-90">Buat Pengajuan</span>
                 </a>
-                <?php if($usulanKenaikanGaji->status_proses == 'proses ditolak'): ?>
-                    <div class="alert-danger">
-                        Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
-                    </div>
-                <?php endif; ?>
             <?php else: ?>
-                <a href="<?php echo e(route('gaji.create')); ?>"
-                   class="btn btn-primary btn-icon-split btn-sm">
-                    <span class="icon text-white">
-                        <i class="far fa-plus-square"></i>
-                    </span>
-                    <span class="text-black-90">Buat Pengajuan</span>
-                </a>
+                <?php if($usulanKenaikanGaji != null): ?>
+                    <a href="<?php echo e(route('gaji.create')); ?>"
+                    class="btn btn-primary btn-icon-split btn-sm <?php if($usulanKenaikanGaji->status_proses == 'belum diproses'): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
+                        <span class="icon text-white">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="text-black-90">Buat Pengajuan</span>
+                    </a>
+                    <?php if($usulanKenaikanGaji->status_proses == 'proses ditolak'): ?>
+                        <div class="alert-danger">
+                            Usulan kenaikan gaji anda ditolak. Silahkan buat pengajuan lagi!
+                        </div>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <a href="<?php echo e(route('gaji.create')); ?>"
+                    class="btn btn-primary btn-icon-split btn-sm">
+                        <span class="icon text-white">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="text-black-90">Buat Pengajuan</span>
+                    </a>
+                <?php endif; ?>
             <?php endif; ?>
-
             <?php if(Session::has('success')): ?>
                 <div class="alert-success">
                     <?php echo e(Session::get('success')); ?>

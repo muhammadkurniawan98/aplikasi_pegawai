@@ -4,7 +4,15 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
-
+            <?php if(auth()->user()->status_kepegawaian == 'Pensiun'): ?>
+                <a href="<?php echo e(route('gaji.create')); ?>"
+                   class="btn btn-primary btn-icon-split btn-sm disabled">
+                    <span class="icon text-white">
+                        <i class="far fa-plus-square"></i>
+                    </span>
+                    <span class="text-black-90">Buat Pengajuan</span>
+                </a>
+            <?php else: ?>
                 <?php if($usulanPensiun != null): ?>
                     <a href="<?php echo e(route('pensiun.create')); ?>"
                        class="btn btn-primary btn-icon-split btn-sm <?php if($usulanPensiun->status_proses == 'belum diproses'): ?> <?php echo e('disabled'); ?> <?php endif; ?>">
@@ -35,7 +43,7 @@
 
                     </div>
                 <?php endif; ?>
-
+            <?php endif; ?>
                 <br><br><br>
 
                 <div class="card o-hidden border-0 shadow-none">
