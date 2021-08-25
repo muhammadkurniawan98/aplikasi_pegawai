@@ -14,6 +14,9 @@
                     </span>
                     <span class="text-black-90">Buat Pengajuan</span>
                 </a>
+                <div class="alert-danger">
+                    Anda sudah berstatus pensiun.
+                </div>
             @else
                 @if($usulanKenaikanGaji != null)
                     <a href="{{ route('gaji.create') }}"
